@@ -1,0 +1,38 @@
+let g:solarized_termcolors=256
+"color solarized
+color badwolf
+set background=dark
+"set background=light
+"color molokai
+
+set wrap
+set linebreak
+set nolist
+set whichwrap&
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 0
+"UnBundle 'Shougo/neocomplcache'
+"UnBundle 'honza/vim-snippets'
+"UnBundle 'Shougo/neocomplete.vim.git'
+"UnBundle 'Shougo/neosnippet'
+"UnBundle 'Shougo/neosnippet-snippets'
+
+noremap <c-s> :update<CR>
+inoremap <c-s> <c-o>:update<CR>
+vmap <c-s> <esc>:w<CR>gv
+
+set timeoutlen=10 ttimeoutlen=0

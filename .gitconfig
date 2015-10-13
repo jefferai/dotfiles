@@ -1,0 +1,11 @@
+[user]
+	email = jeffrey.mitchell@gmail.com
+	name = Jeff Mitchell
+[credential]
+	helper = store
+[push]
+	default = simple
+[core]
+	editor = vim
+[alias]
+    pr = "!f() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;  }; f"
