@@ -51,21 +51,25 @@ set number                " show line numbers
 set relativenumber        " show other line numbers relative to the current
 set showcmd               " show command in bottom bar
 set cursorline            " highlight current line
-filetype plugin indent on " load filetype-specific and plugin-specific indent files
 set wildmenu              " visual autocomplete for command menu
 set lazyredraw            " redraw only when we need to
 set showmatch             " highlight matching [{()}]
 set pastetoggle=<F2>      " use F2 to switch into paste mode
 set mouse=a               " allow capturing the mouse for scrolling
 
+filetype plugin indent on " load filetype-specific and plugin-specific indent files
+
 if has('gui_running')
-    "set guioptions-=T    " Remove the toolbar
+    set guioptions-=T     " Remove the toolbar
     set lines=40          " 40 lines of text instead of 24
 else
     if &term == 'xterm' || &term == 'screen'
         set t_Co=256      " enable 256 colors
     endif
 endif
+
+set list                  " show whitespace
+set listchars=tab:\|\     " use pipes for whitespace
 
 colorscheme badwolf       " awesome colorscheme
 " }}}
@@ -165,6 +169,12 @@ augroup gogroup
 	autocmd FileType go nmap <Leader>i <Plug>(go-info)
 	autocmd FileType go nmap <Leader>e <Plug>(go-rename)
 augroup END
+" }}}
+
+
+" Airline {{{
+set laststatus=2
+set ttimeoutlen=50
 " }}}
 
 
