@@ -3,36 +3,74 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins go here
 
+" Fast file switching
 Plug 'kien/ctrlp.vim'
+
+" Go support
 Plug 'fatih/vim-go'
+
+" Search using The Silver Searcher
 Plug 'rking/ag.vim'
+
+" Graphical undo tree browsing
 Plug 'sjl/gundo.vim'
+
+" A whole bunch of color schemes
 Plug 'flazz/vim-colorschemes'
+
+" ctags-based tag bar
 Plug 'majutsushi/tagbar'
+
+" Allows pressing F12 to toggle mouse capture in terminal, great for copying
 Plug 'nvie/vim-togglemouse'
+
+" Info line
 Plug 'bling/vim-airline'
+
+" Syntax checking support (using gofmt for instance)
 Plug 'scrooloose/syntastic'
+
+" Enhancements for when running in tmux
 Plug 'edkolev/tmuxline.vim'
+
+" Allows using vim to generate prompt lines
 Plug 'edkolev/promptline.vim'
+
+" Show diff information in the gutter
 Plug 'mhinz/vim-signify'
+
+" Go completion support
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+" Git handling inside vim
 Plug 'tpope/vim-fugitive'
+
+" Let tab do smart things with omnicomplete
 Plug 'ervandew/supertab'
+
+" Don't run folding logic when not needed, fixes ultra slow omnicomplete
+Plug 'Konfekt/FastFold'
+
+" Better view/session restoring/saving
+Plug 'kopischke/vim-stay'
+
+" Handle lines/columns in paths, e.g. from stacktraces
+Plug 'vim-fetch'
 
 call plug#end()
 " }}}
 
 
 " Misc global settings {{{
-syntax enable           " enable syntax processing
-set modeline            " turn on modeline processing
-set modelines=4         " look at beginning or end of file
-set hidden              " allow buffers to live in the background with changes
-set history=1000        " remember a lot of history
-set title               " change the terminal's title
-set visualbell          " don't beep
-set noerrorbells        " don't beep
-set viminfo='100,<100,%,n~/.viminfo
+syntax enable                       " enable syntax processing
+set modeline                        " turn on modeline processing
+set modelines=4                     " look at beginning or end of file
+set hidden                          " allow buffers to live in the background with changes
+set history=1000                    " remember a lot of history
+set title                           " change the terminal's title
+set visualbell                      " don't beep
+set noerrorbells                    " don't beep
+set viminfo='100,<100,%,n~/.viminfo " extend amount of saved info
 " }}}
 
 
@@ -49,8 +87,8 @@ set softtabstop=4       " number of spaces in tab when editing
 " UI settings {{{
 set number                " show line numbers
 set relativenumber        " show other line numbers relative to the current
-set showcmd               " show command in bottom bar
 set cursorline            " highlight current line
+set showcmd               " show command in bottom bar
 set wildmenu              " visual autocomplete for command menu
 set lazyredraw            " redraw only when we need to
 set showmatch             " highlight matching [{()}]
@@ -69,7 +107,7 @@ else
 endif
 
 set list                  " show whitespace
-set listchars=tab:\|\     " use pipes for whitespace
+set listchars=tab:\|\     " use pipes for tab
 
 colorscheme badwolf       " awesome colorscheme
 " }}}
@@ -81,7 +119,7 @@ set hlsearch            " highlight matches
 set ignorecase          " ignore case when searching
 set smartcase           " but be smart about capitalization
 
-" turn off search highlight with ', '
+" turn off search highlight with leader + space
 nnoremap <leader><space> :nohlsearch<CR>
 " }}}
 
@@ -89,12 +127,12 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Folding settings {{{
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
+set foldlevel=10        " open most folds by default
 
 " space open/closes folds
 nnoremap <space> za
 
-set foldmethod=syntax   " fold based on syntax definitions
+set foldmethod=syntax   " Use syntax folding, dangerous without FastFold!
 " }}}
 
 
@@ -108,31 +146,23 @@ nnoremap k gk
 nnoremap B ^
 nnoremap E $
 
-" $/^ doesn't do anything
+" $/^ doesn't do anything to train using B and E
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
 " highlight last inserted text
 nnoremap gV `[v`]
-
-" restore cursor when entering vim; from
-" http://stackoverflow.com/questions/8854371/vim-how-to-restore-the-cursors-logical-and-physical-positions
-au BufWinLeave * mkview
-au VimEnter * loadview
 " }}}
 
 
 " Leader settings {{{
-"let mapleader=","
+" For whatever reason, 'let mapleader=...' is *not* working for me;
+" nmap/vmap work just fine
 nmap , \
 vmap , \
 
-
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
-
-" save session/windows
-nnoremap <leader>s :mksession<CR>
 
 " open ag.vim
 nnoremap <leader>a :Ag
@@ -150,6 +180,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 
 " Tagbar {{{
+" Use leader + tt for toggle
 nnoremap <silent> <leader>tt :TagbarToggle<CR>
 "}}}
 
@@ -173,7 +204,9 @@ augroup END
 
 
 " Airline {{{
-set laststatus=2
+set laststatus=2    " always show the status line
+
+" prevents a long delay when switching into insert mode when using vim-airline
 set ttimeoutlen=50
 " }}}
 
@@ -189,8 +222,14 @@ let g:syntastic_auto_loc_list = 1
 
 
 " SuperTab {{{
-"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" Let SuperTab try to do the right thing at the right time when you hit Tab
 let g:SuperTabDefaultCompletionType = "context"
+" }}}
+
+
+" vim-stay {{{
+" Suggested by the author for portability of view files
+set viewoptions=cursor,folds,slash,unix
 " }}}
 
 
