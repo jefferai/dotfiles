@@ -57,6 +57,12 @@ Plug 'kopischke/vim-stay'
 " Handle lines/columns in paths, e.g. from stacktraces
 Plug 'vim-fetch'
 
+" Smart tabularizing; also needed for vim-markdown
+Plug 'godlygeek/tabular'
+
+" Better Markdown handling
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 " }}}
 
@@ -168,6 +174,10 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>a :Ag
 " }}}
 
+" Spelling settings {{{
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+" }}}
 
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -230,6 +240,11 @@ let g:SuperTabDefaultCompletionType = "context"
 " vim-stay {{{
 " Suggested by the author for portability of view files
 set viewoptions=cursor,folds,slash,unix
+" }}}
+
+
+" vim-markdown {{{
+let g:vim_markdown_frontmatter=1
 " }}}
 
 
