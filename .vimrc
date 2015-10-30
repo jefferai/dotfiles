@@ -152,10 +152,6 @@ nnoremap k gk
 nnoremap B ^
 nnoremap E $
 
-" $/^ doesn't do anything to train using B and E
-nnoremap $ <nop>
-nnoremap ^ <nop>
-
 " highlight last inserted text
 nnoremap gV `[v`]
 " }}}
@@ -174,10 +170,12 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>a :Ag
 " }}}
 
+
 " Spelling settings {{{
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
 " }}}
+
 
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
