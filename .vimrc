@@ -203,7 +203,7 @@ let g:go_fmt_command = "goimports"
 augroup gogroup
 	autocmd!
 	autocmd FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-	autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
+	autocmd FileType go nmap <Leader>gd <Plug>(go-describe)
 	autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 	autocmd FileType go nmap <Leader>i <Plug>(go-info)
 	autocmd FileType go nmap <Leader>e <Plug>(go-rename)
