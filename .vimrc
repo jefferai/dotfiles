@@ -243,6 +243,13 @@ set viewoptions=cursor,folds,slash,unix
 
 " vim-markdown {{{
 let g:vim_markdown_frontmatter=1
+augroup markdowngroup
+	autocmd!
+	autocmd FileType markdown set tabstop=4
+	autocmd FileType markdown set shiftwidth=4
+	autocmd FileType markdown set expandtab
+augroup END
+
 " }}}
 
 
