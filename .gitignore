@@ -25,3 +25,5 @@
 .face.icon
 .lesshst
 .psql_history
+.vim
+.gnupg
