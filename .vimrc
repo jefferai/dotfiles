@@ -63,6 +63,9 @@ Plug 'godlygeek/tabular'
 " Better Markdown handling
 Plug 'plasticboy/vim-markdown'
 
+" Map useful stuff to []
+Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 " }}}
 
