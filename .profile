@@ -23,6 +23,7 @@ fi
 
 export GOPATH=$HOME/go
 export GOROOT=$HOME/src/go
+export GOROOT_BOOTSTRAP=/usr/local/go
 export CGO_ENABLED=0
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
