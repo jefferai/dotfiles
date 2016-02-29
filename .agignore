@@ -1,5 +1,5 @@
 tags
-Godeps
 bin
 pkg
 website/source/assets/javascripts/lib
+vendor

@@ -134,14 +134,15 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 
 " Folding settings {{{
-set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldlevel=10        " open most folds by default
+set nofoldenable         " plugin updates broke folding, so turning off for now
+"set foldenable          " enable folding
+"set foldlevelstart=10   " open most folds by default
+"set foldlevel=10        " open most folds by default
 
 " space open/closes folds
 nnoremap <space> za
 
-set foldmethod=syntax   " Use syntax folding, dangerous without FastFold!
+"set foldmethod=syntax   " Use syntax folding, dangerous without FastFold!
 " }}}
 
 

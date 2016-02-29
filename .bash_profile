@@ -18,3 +18,10 @@ cl () {
   git add CHANGELOG.md;
   git commit -m "changelog++";
 }
+
+giv () {
+  pushd -n $(pwd);
+  gov;
+  make dev;
+  popd;
+}

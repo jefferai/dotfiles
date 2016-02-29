@@ -22,16 +22,15 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export GOPATH=$HOME/go
-export GOROOT=$HOME/src/go
 export GOROOT_BOOTSTRAP=/usr/local/go
 export CGO_ENABLED=0
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/bin:$PATH
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
 alias gov="cd ~/go/src/github.com/hashicorp/vault"
-alias giv="go install github.com/hashicorp/vault"
 alias ack="ack-grep --ignore-dir=Godeps --ignore-dir=website"
+alias vsd="vault server --dev"
 
 alias kc="keychain personal_rsa"
 
