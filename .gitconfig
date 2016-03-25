@@ -4,7 +4,7 @@
 [credential]
 	helper = store
 [push]
-	default = simple
+	default = upstream
 [core]
 	editor = vim
 [alias]
