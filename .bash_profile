@@ -22,6 +22,13 @@ cl () {
 giv () {
   pushd -n $(pwd);
   gov;
-  make dev;
+  CGO_ENABLED=0 make dev;
+  popd;
+}
+
+gev () {
+  pushd -n $(pwd);
+  gov;
+  CGO_ENABLED=1 make dev;
   popd;
 }

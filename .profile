@@ -23,7 +23,7 @@ fi
 
 export GOPATH=$HOME/go
 export GOROOT_BOOTSTRAP=/usr/local/go
-export CGO_ENABLED=0
+#export CGO_ENABLED=0
 export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/bin:$HOME/src/go/bin:$PATH
 
 export VAULT_ADDR="http://127.0.0.1:8200"
