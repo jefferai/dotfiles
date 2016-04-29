@@ -6,6 +6,7 @@
 
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_THEME=Solarized
+#GIT_PROMPT_START="\h"
 . ~/.bash-git-prompt/gitprompt.sh
 
 stty -ixon
@@ -22,13 +23,13 @@ cl () {
 giv () {
   pushd -n $(pwd);
   gov;
-  CGO_ENABLED=0 make dev;
+  make dev;
   popd;
 }
 
 gev () {
   pushd -n $(pwd);
   gov;
-  CGO_ENABLED=1 make dev;
+  make dev;
   popd;
 }

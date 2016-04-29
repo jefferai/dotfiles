@@ -1,1 +1,1 @@
-set guifont=DejaVu\ Sans\ Mono\ 10.5
+set guifont=DejaVu\ Sans\ Mono\ 8.0

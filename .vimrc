@@ -66,6 +66,8 @@ Plug 'plasticboy/vim-markdown'
 " Map useful stuff to []
 Plug 'tpope/vim-unimpaired'
 
+Plug 'fatih/vim-hclfmt'
+
 call plug#end()
 " }}}
 
