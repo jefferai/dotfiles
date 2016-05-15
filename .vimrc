@@ -28,7 +28,7 @@ Plug 'nvie/vim-togglemouse'
 Plug 'bling/vim-airline'
 
 " Syntax checking support (using gofmt for instance)
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 
 " Enhancements for when running in tmux
 Plug 'edkolev/tmuxline.vim'
@@ -97,7 +97,7 @@ set softtabstop=4       " number of spaces in tab when editing
 
 " UI settings {{{
 set number                " show line numbers
-set relativenumber        " show other line numbers relative to the current
+"set relativenumber        " show other line numbers relative to the current
 set cursorline            " highlight current line
 set showcmd               " show command in bottom bar
 set wildmenu              " visual autocomplete for command menu
@@ -199,7 +199,7 @@ nnoremap <silent> <leader>tt :TagbarToggle<CR>
 "}}}
 
 
-" Go {{{
+" vim-go {{{
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -207,13 +207,16 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_interfaces = 1
 let g:go_fmt_command = "goimports"
+"let g:go_list_type = "quickfix"
+"let g:go_fmt_fail_silently = 1
 augroup gogroup
-	autocmd!
-	autocmd FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-	autocmd FileType go nmap <Leader>gd <Plug>(go-describe)
-	autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-	autocmd FileType go nmap <Leader>i <Plug>(go-info)
-	autocmd FileType go nmap <Leader>e <Plug>(go-rename)
+  autocmd!
+  autocmd FileType go nmap <Leader>gb <Plug>(go-build)
+  autocmd FileType go nmap <Leader>gd <Plug>(go-describe)
+  autocmd FileType go nmap <Leader>gdb <Plug>(go-doc-browser)
+  autocmd FileType go nmap <Leader>gdv <Plug>(go-doc-vertical)
+  autocmd FileType go nmap <Leader>i <Plug>(go-info)
+  autocmd FileType go nmap <Leader>e <Plug>(go-rename)
 augroup END
 " }}}
 
@@ -231,8 +234,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 " }}}
 
 
@@ -251,10 +256,10 @@ set viewoptions=cursor,folds,slash,unix
 " vim-markdown {{{
 let g:vim_markdown_frontmatter=1
 augroup markdowngroup
-	autocmd!
-	autocmd FileType markdown set tabstop=4
-	autocmd FileType markdown set shiftwidth=4
-	autocmd FileType markdown set expandtab
+  autocmd!
+  autocmd FileType markdown set tabstop=4
+  autocmd FileType markdown set shiftwidth=4
+  autocmd FileType markdown set expandtab
 augroup END
 
 " }}}
