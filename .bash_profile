@@ -12,7 +12,7 @@ GIT_PROMPT_THEME=Solarized
 stty -ixon
 
 checkout-pr () {
-  git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
+  git fetch oss pull/$1/head:pr-$1 && git checkout pr-$1;
 }
 
 cl () {
