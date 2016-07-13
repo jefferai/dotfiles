@@ -28,6 +28,7 @@ Plug 'nvie/vim-togglemouse'
 Plug 'bling/vim-airline'
 
 " Syntax checking support (using gofmt for instance)
+" Doesn't play nicely with vim-go lately
 " Plug 'scrooloose/syntastic'
 
 " Enhancements for when running in tmux
@@ -66,6 +67,7 @@ Plug 'plasticboy/vim-markdown'
 " Map useful stuff to []
 Plug 'tpope/vim-unimpaired'
 
+" HCL formatting
 Plug 'fatih/vim-hclfmt'
 
 call plug#end()
@@ -160,6 +162,9 @@ nnoremap E $
 
 " highlight last inserted text
 nnoremap gV `[v`]
+
+" Make 'jk' exit from insert mode
+inoremap jk <Esc>
 " }}}
 
 
