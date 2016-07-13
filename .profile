@@ -16,20 +16,12 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
 export GOPATH=$HOME/go
-export GOROOT_BOOTSTRAP=/usr/local/go
-#export CGO_ENABLED=0
 export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/src/github.com/hashicorp/consul/bin:$GOPATH/bin:$HOME/src/go/bin:$PATH
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
 alias gov="cd ~/go/src/github.com/hashicorp/vault"
-alias ack="ack-grep --ignore-dir=Godeps --ignore-dir=website"
 alias vsd="vault server --dev"
 
 alias kc="keychain personal_rsa"
