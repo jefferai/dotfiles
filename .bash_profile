@@ -11,6 +11,10 @@ GIT_PROMPT_THEME=Solarized
 
 stty -ixon
 
+vi () {
+  /usr/bin/nvim $@
+}
+
 checkout-pr () {
   git fetch oss pull/$1/head:pr-$1 && git checkout pr-$1;
 }
@@ -32,4 +36,20 @@ gev () {
   gov;
   make dev;
   popd;
+}
+
+install_dotfiles () {
+  cd ~
+  # Install some common stuff
+  sudo apt-get install vim jq bash-completion tmux
+  # Install bash-git-prompt
+  git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+  # Install vim-plug and plugins
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  vi -c ':PlugUpdate'
+  # Install tmux plugin manager
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  # Map neovim config
+  mkdir -p ~/.config/nvim
+  ln -s ~/.vimrc ~/.config/nvim/init.vim
 }

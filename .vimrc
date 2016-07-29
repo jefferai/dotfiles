@@ -38,7 +38,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
 
 " Show diff information in the gutter
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " Go completion support
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
@@ -70,6 +70,9 @@ Plug 'tpope/vim-unimpaired'
 " HCL formatting
 Plug 'fatih/vim-hclfmt'
 
+" Automatic session management
+Plug 'tpope/vim-obsession'
+
 call plug#end()
 " }}}
 
@@ -83,7 +86,9 @@ set history=1000                    " remember a lot of history
 set title                           " change the terminal's title
 set visualbell                      " don't beep
 set noerrorbells                    " don't beep
-set viminfo='100,<100,%,n~/.viminfo " extend amount of saved info
+if !has('nvim')
+    set viminfo='100,<100,%,n~/.viminfo " extend amount of saved info, only for regular vim
+endif
 " }}}
 
 
