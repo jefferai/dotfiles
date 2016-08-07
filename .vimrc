@@ -119,7 +119,7 @@ if has('gui_running')
     set guioptions-=T     " Remove the toolbar
     set lines=40          " 40 lines of text instead of 24
 else
-    if &term == 'xterm' || &term == 'screen'
+    if &term == 'xterm' || &term == 'screen' || &term == 'screen-256color'
         set t_Co=256      " enable 256 colors
     endif
 endif

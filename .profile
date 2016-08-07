@@ -26,6 +26,8 @@ alias vsd="vault server --dev"
 
 alias kc="keychain personal_rsa"
 
+alias tmux="tmux -2"
+
 export PATH="$HOME/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
