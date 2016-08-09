@@ -16,16 +16,14 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export GOROOT_BOOTSTRAP=/usr/lib/go-1.6
 export GOPATH=$HOME/go
 export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/src/github.com/hashicorp/consul/bin:$GOPATH/bin:$HOME/src/go/bin:$PATH
-
 export VAULT_ADDR="http://127.0.0.1:8200"
 
 alias gov="cd ~/go/src/github.com/hashicorp/vault"
 alias vsd="vault server -log-level=trace -dev -dev-root-token-id=root"
-
 alias kc="keychain personal_rsa"
-
 alias tmux="tmux -2"
 
 export PATH="$HOME/bin:$PATH"
