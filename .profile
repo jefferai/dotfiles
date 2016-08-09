@@ -22,7 +22,7 @@ export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/src/github.com/ha
 export VAULT_ADDR="http://127.0.0.1:8200"
 
 alias gov="cd ~/go/src/github.com/hashicorp/vault"
-alias vsd="vault server --dev"
+alias vsd="vault server -log-level=trace -dev -dev-root-token-id=root"
 
 alias kc="keychain personal_rsa"
 
