@@ -99,6 +99,7 @@ set nolist              " list disables linebreak
 set whichwrap&          " don't have left/right move to new lines
 set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
+set shiftwidth=4        " without this it does two tab stops recently, not sure why
 " }}}
 
 
