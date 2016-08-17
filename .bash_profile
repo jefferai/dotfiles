@@ -41,7 +41,7 @@ gev () {
 install_dotfiles () {
   cd ~
   # Install some common stuff
-  sudo apt-get install vim jq bash-completion tmux
+  sudo apt-get install vim jq bash-completion tmux zip unzip
   # Install bash-git-prompt
   git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
   # Install vim-plug and plugins
