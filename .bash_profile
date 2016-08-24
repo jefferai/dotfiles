@@ -50,7 +50,6 @@ install_dotfiles () {
   # Install tmux plugin manager
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   # Map neovim config
-  mkdir -p ~/.config/nvim
   ln -s ~/.vim ~/.config/nvim
   ln -s ~/.vimrc ~/.config/nvim/init.vim
 }
