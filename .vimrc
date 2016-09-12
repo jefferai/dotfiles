@@ -271,6 +271,9 @@ augroup markdowngroup
   autocmd FileType markdown set tabstop=4
   autocmd FileType markdown set shiftwidth=4
   autocmd FileType markdown set expandtab
+  " Try to fix badness around Markdown and bullets
+  " https://github.com/plasticboy/vim-markdown/issues/232#issuecomment-246173676
+  autocmd FileType markdown set formatoptions-=q | set formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^\\s*\[-*+]\\s\\+
 augroup END
 
 " }}}
