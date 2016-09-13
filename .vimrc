@@ -73,6 +73,9 @@ Plug 'fatih/vim-hclfmt'
 " Automatic session management
 Plug 'tpope/vim-obsession'
 
+" Better JSON support
+Plug 'elzr/vim-json'
+
 call plug#end()
 " }}}
 
@@ -265,12 +268,19 @@ set viewoptions=cursor,folds,slash,unix
 
 
 " vim-markdown {{{
-let g:vim_markdown_frontmatter=1
+" Highlight YAML frontmatter
+let g:vim_markdown_frontmatter = 1
+" Highlight JSON frontmatter
+let g:vim_markdown_json_frontmatter = 1
+" Stop folding, I trigger it too often accidentally
+let g:vim_markdown_folding_disabled = 1
+" Use 2, not 4, spaces on new item for indentation
+let g:vim_markdown_new_list_item_indent = 2
 augroup markdowngroup
   autocmd!
-  autocmd FileType markdown set tabstop=4
-  autocmd FileType markdown set shiftwidth=4
-  autocmd FileType markdown set expandtab
+  "autocmd FileType markdown set tabstop=4
+  "autocmd FileType markdown set shiftwidth=4
+  "autocmd FileType markdown set expandtab
   " Try to fix badness around Markdown and bullets
   " https://github.com/plasticboy/vim-markdown/issues/232#issuecomment-246173676
   autocmd FileType markdown set formatoptions-=q | set formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^\\s*\[-*+]\\s\\+
