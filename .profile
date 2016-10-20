@@ -24,7 +24,7 @@ export VAULT_ADDR="http://127.0.0.1:8200"
 
 alias gov="cd ~/go/src/github.com/hashicorp/vault"
 alias vsd="vault server -log-level=trace -dev -dev-root-token-id=root"
-alias kc="keychain personal_rsa"
+alias kc="eval $(keychain --eval --agents ssh --inherit any personal_rsa)"
 alias tmux="tmux -2"
 
 export PATH="$HOME/bin:$PATH"
