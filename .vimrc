@@ -226,6 +226,7 @@ let g:go_fmt_command = "goimports"
 augroup gogroup
   autocmd!
   autocmd FileType go nmap <Leader>gb <Plug>(go-build)
+  autocmd FileType go nmap <Leader>gt <Plug>(go-test)
   autocmd FileType go nmap <Leader>gd <Plug>(go-describe)
   autocmd FileType go nmap <Leader>gdb <Plug>(go-doc-browser)
   autocmd FileType go nmap <Leader>gdv <Plug>(go-doc-vertical)
