@@ -227,9 +227,10 @@ augroup gogroup
   autocmd!
   autocmd FileType go nmap <Leader>gb <Plug>(go-build)
   autocmd FileType go nmap <Leader>gt <Plug>(go-test)
-  autocmd FileType go nmap <Leader>gd <Plug>(go-describe)
+  autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
   autocmd FileType go nmap <Leader>gdb <Plug>(go-doc-browser)
   autocmd FileType go nmap <Leader>gdv <Plug>(go-doc-vertical)
+  autocmd FileType go nmap <Leader>gdsc <Plug>(go-describe)
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
   autocmd FileType go nmap <Leader>e <Plug>(go-rename)
 augroup END
