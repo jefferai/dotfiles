@@ -30,14 +30,7 @@ cl () {
 giv () {
   pushd -n $(pwd);
   gov;
-  make dev;
-  popd;
-}
-
-gev () {
-  pushd -n $(pwd);
-  gov;
-  make dev;
+  time make dev;
   popd;
 }
 

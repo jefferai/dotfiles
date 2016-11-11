@@ -76,6 +76,9 @@ Plug 'tpope/vim-obsession'
 " Better JSON support
 Plug 'elzr/vim-json'
 
+" Task support
+Plug 'joonty/vim-do'
+
 call plug#end()
 " }}}
 
