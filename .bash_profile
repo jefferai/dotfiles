@@ -34,6 +34,13 @@ giv () {
   popd;
 }
 
+gev () {
+  pushd -n $(pwd);
+  gov;
+  time make entdev;
+  popd;
+}
+
 install_dotfiles () {
   cd ~
   # Install some common stuff
