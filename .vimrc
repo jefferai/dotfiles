@@ -56,7 +56,7 @@ Plug 'Konfekt/FastFold'
 Plug 'kopischke/vim-stay'
 
 " Handle lines/columns in paths, e.g. from stacktraces
-Plug 'vim-fetch'
+Plug 'kopischke/vim-fetch'
 
 " Smart tabularizing; also needed for vim-markdown
 Plug 'godlygeek/tabular'

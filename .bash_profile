@@ -14,10 +14,6 @@ GIT_PROMPT_THEME=Solarized
 
 stty -ixon
 
-vi () {
-  nvim $@
-}
-
 vault2 () {
   VAULT_ADDR=http://127.0.0.1:8202 vault $@
 }
