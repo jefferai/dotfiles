@@ -18,6 +18,10 @@ vault2 () {
   VAULT_ADDR=http://127.0.0.1:8202 vault $@
 }
 
+vault3 () {
+  VAULT_ADDR=http://127.0.0.1:8204 vault $@
+}
+
 checkout-pr () {
   git fetch oss pull/$1/head:pr-$1 && git checkout pr-$1;
 }

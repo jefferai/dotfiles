@@ -27,6 +27,7 @@ alias vsd="vault server -log-level=trace -dev -dev-root-token-id=root"
 alias vrd="VAULT_REDIRECT_ADDR=http://127.0.0.1:8200 vault server -log-level=trace -dev -dev-root-token-id=root -ha -transactional"
 alias vrd2="VAULT_REDIRECT_ADDR=http://127.0.0.1:8202 vault server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8202 -ha -transactional"
 alias tmux="tmux -2"
+alias repem="vault write -f sys/replication/primary/enable; vault write -field wrapping_token sys/replication/primary/secondary-token id=asdf | vault2 write sys/replication/secondary/enable token=-"
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
 
