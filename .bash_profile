@@ -45,6 +45,11 @@ gev () {
   popd;
 }
 
+guv () {
+  go get -u $1;
+  govendor update $1;
+}
+
 install_dotfiles () {
   cd ~
   # Install some common stuff
