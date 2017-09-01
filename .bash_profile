@@ -66,4 +66,4 @@ install_dotfiles () {
   ln -s ~/.vimrc ~/.config/nvim/init.vim
 }
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
