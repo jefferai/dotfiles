@@ -33,7 +33,7 @@ alias repem="vault write -f sys/replication/primary/enable; vault write -field w
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
