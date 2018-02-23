@@ -85,6 +85,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " deoplete-go
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 
+" Needed for deoplete
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 call plug#end()
 " }}}
 
@@ -140,7 +144,11 @@ endif
 set list                  " show whitespace
 set listchars=tab:\|\     " use pipes for tab
 
-colorscheme badwolf       " awesome colorscheme
+set termguicolors
+set background=dark
+let g:gruvbox_italic=1
+colorscheme gruvbox
+" colorscheme badwolf       " awesome colorscheme
 " }}}
 
 
@@ -198,6 +206,13 @@ nnoremap <leader>u :GundoToggle<CR>
 " open ag.vim
 nnoremap <leader>a :Ag
 " }}}
+
+" Faster startup
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
+
+" Required for some plugins
+set encoding=utf-8
 
 
 " Spelling settings {{{

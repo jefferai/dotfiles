@@ -16,7 +16,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export GOROOT_BOOTSTRAP=/usr/lib/go-1.6
+export GOROOT_BOOTSTRAP=/usr/lib/go-1.8
 export GOPATH=$HOME/go
 export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/src/github.com/hashicorp/consul/bin:$GOPATH/bin:$HOME/src/go/bin:$PATH
 
@@ -29,7 +29,8 @@ alias vsd="vault server -log-level=trace -dev -dev-root-token-id=root"
 alias vrd="VAULT_REDIRECT_ADDR=http://127.0.0.1:8200 vault server -log-level=trace -dev -dev-root-token-id=root -dev-ha -dev-transactional"
 alias vrd2="VAULT_REDIRECT_ADDR=http://127.0.0.1:8202 vault server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8202 -dev-ha -dev-transactional"
 alias tmux="tmux -2"
-alias repem="vault write -f sys/replication/primary/enable; vault write -field wrapping_token sys/replication/primary/secondary-token id=asdf | vault2 write sys/replication/secondary/enable token=-"
+alias repem="vault write -f sys/replication/performance/primary/enable; vault write -field wrapping_token sys/replication/performance/primary/secondary-token id=asdf | vault2 write sys/replication/performance/secondary/enable token=-"
+alias drem="vault write -f sys/replication/dr/primary/enable; vault write -field wrapping_token sys/replication/dr/primary/secondary-token id=asdf | vault2 write sys/replication/dr/secondary/enable token=-"
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
 
