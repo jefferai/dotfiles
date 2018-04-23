@@ -136,15 +136,19 @@ if has('gui_running')
     set guioptions-=T     " Remove the toolbar
     set lines=40          " 40 lines of text instead of 24
 else
-    if &term == 'xterm' || &term == 'screen' || &term == 'screen-256color'
-        set t_Co=256      " enable 256 colors
-    endif
+" Probably this doesn't do anything anymore as it seems nvim has removed &term
+"    if &term == 'xterm' || &term == 'screen' || &term == 'screen-256color' || &term == 'putty-256color'
+"        set t_Co=256      " enable 256 colors
+"    endif
 endif
 
 set list                  " show whitespace
 set listchars=tab:\|\     " use pipes for tab
 
-set termguicolors
+if $TERM != 'putty-256color'
+    set termguicolors
+endif
+
 set background=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
