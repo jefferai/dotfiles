@@ -50,6 +50,18 @@ guv () {
   govendor update $1;
 }
 
+qq() {
+    clear
+    local gpath="${GOPATH:-$HOME/go}"
+    "${gpath%%:*}/src/github.com/y0ssar1an/q/q.sh" "$@"
+}
+rmqq() {
+    if [[ -f "$TMPDIR/q" ]]; then
+        rm "$TMPDIR/q"
+    fi
+    qq
+}
+
 install_dotfiles () {
   cd ~
   # Install some common stuff
