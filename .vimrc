@@ -41,7 +41,7 @@ Plug 'edkolev/promptline.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Go completion support
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " Git handling inside vim
 Plug 'tpope/vim-fugitive'
