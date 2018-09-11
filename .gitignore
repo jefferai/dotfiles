@@ -1,4 +1,5 @@
 !.*
+!.config/awesome/rc.lua
 *
 .atom
 .bash-git-prompt
