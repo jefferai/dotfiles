@@ -83,7 +83,7 @@ Plug 'joonty/vim-do'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " deoplete-go
-Plug 'zchee/deoplete-go', { 'do': 'make' }
+"Plug 'zchee/deoplete-go', { 'do': 'make' }
 
 " Needed for deoplete
 Plug 'roxma/nvim-yarp'
@@ -249,6 +249,12 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_interfaces = 1
 let g:go_fmt_command = "goimports"
+let g:go_metalinter_command = ""
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'ineffassign', 'misspell']
+let g:go_metalinter_path = "./..."
+"let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'ineffassign', 'misspell']
+let g:go_metalinter_deadline = "10s"
 "let g:go_list_type = "quickfix"
 "let g:go_fmt_fail_silently = 1
 augroup gogroup
