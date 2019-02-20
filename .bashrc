@@ -124,3 +124,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 complete -C /home/jeff/go/src/github.com/hashicorp/vault/bin/vault vault
 source <(kubectl completion bash)
+if [ -f /home/jeff/src/hub-bash-completion/hub.bash_completion ]; then
+  . /home/jeff/src/hub-bash-completion/hub.bash_completion
+fi
