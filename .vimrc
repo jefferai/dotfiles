@@ -83,7 +83,7 @@ Plug 'joonty/vim-do'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " deoplete-go
-"Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 
 " Needed for deoplete
 Plug 'roxma/nvim-yarp'
@@ -330,7 +330,7 @@ let g:deoplete#enable_at_startup = 1
 " deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 " let g:deoplete#sources#go#pointer = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+" let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 " Tmux {{{
 " allows cursor change in tmux mode
