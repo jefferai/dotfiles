@@ -37,8 +37,11 @@ Plug 'edkolev/tmuxline.vim'
 " Allows using vim to generate prompt lines
 Plug 'edkolev/promptline.vim'
 
+" Diff showing stuff
+Plug 'mhinz/vim-signify'
+
 " Show diff information in the gutter
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 
 " Go completion support
 Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
@@ -278,6 +281,8 @@ set laststatus=2    " always show the status line
 set ttimeoutlen=50
 " }}}
 
+" signify
+let g:signify_vcs_list = ['git']
 
 " Syntastic {{{
 "set statusline+=%#warningmsg#
