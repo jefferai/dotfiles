@@ -128,3 +128,4 @@ if [ -f /home/jeff/src/hub-bash-completion/hub.bash_completion ]; then
 fi
 
 complete -C /home/jeff/go/bin/vault vault
+complete -C aws_completer aws
