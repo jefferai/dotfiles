@@ -18,7 +18,7 @@ fi
 
 export GOROOT_BOOTSTRAP=/usr/lib/go-1.8
 export GOPATH=$HOME/go
-export PATH=$GOPATH/src/github.com/hashicorp/vault/bin:$GOPATH/src/github.com/hashicorp/consul/bin:$GOPATH/bin:$HOME/src/go/bin:$PATH
+export PATH=$GOPATH/bin:$HOME/src/go/bin:$PATH
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
