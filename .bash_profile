@@ -7,11 +7,6 @@ if [ -f /usr/local/bin/brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; th
   . $(brew --prefix)/etc/bash_completion
 fi
 
-GIT_PROMPT_ONLY_IN_REPO=1
-GIT_PROMPT_THEME=Solarized
-#GIT_PROMPT_START="\h"
-. ~/.bash-git-prompt/gitprompt.sh
-
 stty -ixon
 
 vault2 () {
