@@ -32,7 +32,8 @@ alias vrd3="VAULT_API_ADDR=http://127.0.0.1:8204 vault server -log-level=trace -
 alias tmux="tmux -2"
 alias oldrepem="vault write -f sys/replication/performance/primary/enable; vault write -field wrapping_token sys/replication/performance/primary/secondary-token id=asdf | vault2 write sys/replication/performance/secondary/enable token=-"
 alias repem="vault write -f sys/replication/performance/primary/enable; vault2 write -f -field=secondary_public_key sys/replication/performance/secondary/generate-public-key | vault write -field token sys/replication/performance/primary/secondary-token id=asdf secondary_public_key=- | vault2 write sys/replication/performance/secondary/enable token=-"
-alias drem="vault write -f sys/replication/dr/primary/enable; vault write -field wrapping_token sys/replication/dr/primary/secondary-token id=asdf | vault2 write sys/replication/dr/secondary/enable token=-"
+alias drem="vault write -f sys/replication/dr/primary/enable; vault2 write -f -field=secondary_public_key sys/replication/dr/secondary/generate-public-key | vault write -field token sys/replication/dr/primary/secondary-token id=asdf secondary_public_key=- | vault2 write sys/replication/dr/secondary/enable token=-"
+alias olddrem="vault write -f sys/replication/dr/primary/enable; vault write -field wrapping_token sys/replication/dr/primary/secondary-token id=asdf | vault2 write sys/replication/dr/secondary/enable token=-"
 alias drem2="vault2 write -f sys/replication/dr/primary/enable; vault2 write -field wrapping_token sys/replication/dr/primary/secondary-token id=asdf | vault3 write sys/replication/dr/secondary/enable token=-"
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
