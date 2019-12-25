@@ -579,5 +579,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- {{{ Programs to run on login
 -- Need to run this upon login for VMWare
-os.execute("vmware-user-suid-wrapper &")
+-- os.execute("vmware-user-suid-wrapper &")
 -- }}}
