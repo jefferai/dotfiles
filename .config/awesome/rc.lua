@@ -581,3 +581,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Need to run this upon login for VMWare
 -- os.execute("vmware-user-suid-wrapper &")
 -- }}}
+awful.spawn("xmodmap /home/jeff/.Xmodmap")
