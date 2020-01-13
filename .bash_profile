@@ -16,7 +16,7 @@ vault3 () {
 }
 
 checkout-pr () {
-  git fetch oss pull/$1/head:pr-$1 && git checkout pr-$1;
+  git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1;
 }
 
 cl () {
