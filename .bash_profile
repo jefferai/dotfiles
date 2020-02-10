@@ -86,3 +86,6 @@ install_dotfiles () {
 }
 
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+source /home/jeff/.config/broot/launcher/bash/br

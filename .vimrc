@@ -41,10 +41,12 @@ Plug 'edkolev/promptline.vim'
 Plug 'mhinz/vim-signify'
 
 " Show diff information in the gutter
-"Plug 'airblade/vim-gitgutter'
+" Caused some weird issues, disabled for now
+" Plug 'airblade/vim-gitgutter'
 
 " Go completion support
-Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" Deprecated with gopls
+" Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " Git handling inside vim
 Plug 'tpope/vim-fugitive'
