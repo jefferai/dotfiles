@@ -2,7 +2,7 @@
 	email = jeffrey.mitchell@gmail.com
 	name = Jeff Mitchell
 [credential]
-	helper = store
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe
 [push]
 	default = upstream
 [core]

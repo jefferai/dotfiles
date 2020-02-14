@@ -88,4 +88,12 @@ install_dotfiles () {
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
+source <(kubectl completion bash)
+if [ -f /home/jeff/src/hub-bash-completion/hub.bash_completion ]; then
+  . /home/jeff/src/hub-bash-completion/hub.bash_completion
+fi
+
+complete -C /home/jeff/go/bin/vault vault
+complete -C aws_completer aws
+
 source /home/jeff/.config/broot/launcher/bash/br

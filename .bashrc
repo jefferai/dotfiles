@@ -120,14 +120,6 @@ fi
 #export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:/usr/local/heroku/bin"
 
-source <(kubectl completion bash)
-if [ -f /home/jeff/src/hub-bash-completion/hub.bash_completion ]; then
-  . /home/jeff/src/hub-bash-completion/hub.bash_completion
-fi
-
-complete -C /home/jeff/go/bin/vault vault
-complete -C aws_completer aws
-
 # Set config variables first
 GIT_PROMPT_ONLY_IN_REPO=1
 
@@ -150,3 +142,8 @@ GIT_PROMPT_ONLY_IN_REPO=1
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 source ~/.bash-git-prompt/gitprompt.sh
+
+export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
+
+sudo /etc/init.d/cron start
+sudo /etc/init.d/ssh start
