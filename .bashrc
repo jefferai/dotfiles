@@ -144,6 +144,7 @@ GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
 
 export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
+export LIBGL_ALWAYS_INDIRECT=1
 
 sudo /etc/init.d/cron start
 sudo /etc/init.d/ssh start
