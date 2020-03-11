@@ -1,5 +1,6 @@
 !.*
 *
+!startawesome.sh
 .atom
 .bash-git-prompt
 .bash_history
