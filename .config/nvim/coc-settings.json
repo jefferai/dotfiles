@@ -1,0 +1,28 @@
+{
+  "languageserver": {
+    "golang": {
+      "command": "~/go/bin/gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+         "cache": {
+           "directory": "/tmp/ccls"
+         }
+       }
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["tf"],
+      "initializationOptions": {}
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["go"],
+  "suggest.disableKind": true,
+  "suggest.snippetIndicator": "",
+  "suggest.preferCompleteThanJumpPlaceholder": true
+}
