@@ -1,10 +1,6 @@
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-if [ -f /usr/local/bin/brew ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
 stty -ixon
 
 vault2 () {
@@ -86,7 +82,6 @@ install_dotfiles () {
 }
 
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 source <(kubectl completion bash)
 if [ -f /home/jeff/src/hub-bash-completion/hub.bash_completion ]; then
@@ -97,3 +92,4 @@ complete -C /home/jeff/go/bin/vault vault
 complete -C aws_completer aws
 
 source /home/jeff/.config/broot/launcher/bash/br
+if [ -e /home/jeff/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jeff/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
