@@ -91,5 +91,4 @@ fi
 complete -C /home/jeff/go/bin/vault vault
 complete -C aws_completer aws
 
-source /home/jeff/.config/broot/launcher/bash/br
 if [ -e /home/jeff/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jeff/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

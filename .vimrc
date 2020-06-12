@@ -218,7 +218,7 @@ nnoremap <leader>a :Ag
 " }}}
 
 " Faster startup
-let g:python3_host_prog = '/home/linuxbrew/.linuxbrew/bin/python3'
+let g:python3_host_prog = '/home/jeff/.venv/bin/python3'
 
 " Required for some plugins
 set encoding=utf-8
