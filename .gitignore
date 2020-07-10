@@ -23,3 +23,8 @@
 !.config/nvim/
 .config/nvim/*
 !.config/nvim/coc-settings.json
+
+# Nix
+!.config/nixpkgs/
+.config/nixpkgs/*
+!.config/nixpkgs/home.nix
