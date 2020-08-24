@@ -19,5 +19,6 @@ in {
   home.packages = [
     unstable.protobuf3_12
     unstable.python3
+    unstable.httpie
   ];
 }
