@@ -36,7 +36,6 @@ alias olddrem="vault write -f sys/replication/dr/primary/enable; vault write -fi
 alias drem2="vault2 write -f sys/replication/dr/primary/enable; vault2 write -field wrapping_token sys/replication/dr/primary/secondary-token id=asdf | vault3 write sys/replication/dr/secondary/enable token=-"
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
-alias git='hub'
 
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
