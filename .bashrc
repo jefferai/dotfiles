@@ -127,3 +127,4 @@ export LIBGL_ALWAYS_INDIRECT=1
 
 sudo /etc/init.d/cron start
 sudo /etc/init.d/ssh start
+sudo prlimit -p "$$" --nofile=10000:10000
