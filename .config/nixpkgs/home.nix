@@ -4,7 +4,10 @@ let
   unstable = import <unstable> {};
 in {
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs.home-manager = {
+    enable = true;
+    path = "...";
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -14,11 +17,15 @@ in {
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "20.03";
+  home.stateVersion = "20.09";
 
   home.packages = [
-    unstable.protobuf3_12
-    unstable.python3
-    unstable.httpie
+    pkgs.protobuf3_12
+    pkgs.python3
+    pkgs.httpie
   ];
+
+  home.username = "jeff";
+
+  home.homeDirectory = "/home/jeff";
 }
