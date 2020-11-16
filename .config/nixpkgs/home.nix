@@ -23,6 +23,7 @@ in {
     pkgs.protobuf3_12
     pkgs.python3
     pkgs.httpie
+    pkgs.yq
   ];
 
   home.username = "jeff";
