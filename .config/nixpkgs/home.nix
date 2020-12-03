@@ -24,7 +24,7 @@ in {
     pkgs.python3
     pkgs.httpie
     pkgs.yq
-	pkgs.kubectl
+    pkgs.kubectl
   ];
 
   home.username = "jeff";
