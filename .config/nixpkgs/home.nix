@@ -25,6 +25,7 @@ in {
     pkgs.httpie
     pkgs.yq
     pkgs.kubectl
+    pkgs.awscli2
   ];
 
   home.username = "jeff";
