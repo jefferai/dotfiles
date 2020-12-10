@@ -41,6 +41,4 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
-export BOUNDARY_KEYRING_TYPE="secret-service"
-
 . "$HOME/.profile-private"
