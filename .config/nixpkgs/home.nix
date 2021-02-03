@@ -27,6 +27,7 @@ in {
     pkgs.kubectl
     pkgs.awscli2
     pkgs.ffmpeg
+    pkgs.bats
   ];
 
   home.username = "jeff";
