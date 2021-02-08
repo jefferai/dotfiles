@@ -28,6 +28,8 @@ in {
     pkgs.awscli2
     pkgs.ffmpeg
     pkgs.bats
+    pkgs.swagger-codegen
+    pkgs.bazel
   ];
 
   home.username = "jeff";
