@@ -28,6 +28,8 @@ in {
     pkgs.awscli2
     pkgs.ffmpeg
     pkgs.bats
+    unstable.yarn
+    unstable.nodejs
     pkgs.swagger-codegen
     pkgs.bazel
   ];
