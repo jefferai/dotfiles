@@ -2,6 +2,7 @@
 
 let
   unstable = import <unstable> {};
+  local = import /home/jeff/src/nixpkgs {};
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager = {
@@ -20,14 +21,14 @@ in {
   home.stateVersion = "20.09";
 
   home.packages = [
-    unstable.protobuf
+    local.protobuf
     pkgs.python3
     pkgs.httpie
     pkgs.yq
     pkgs.kubectl
     pkgs.awscli2
     pkgs.ffmpeg
-    pkgs.bats
+    unstable.bats
     unstable.yarn
     unstable.nodejs
     pkgs.swagger-codegen
