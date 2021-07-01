@@ -2,7 +2,7 @@
 
 let
   unstable = import <unstable> {};
-  local = import /home/jeff/src/nixpkgs {};
+  # local = import /home/jeff/src/nixpkgs {};
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager = {
@@ -18,10 +18,10 @@ in {
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "20.09";
+  home.stateVersion = "21.05";
 
   home.packages = [
-    local.protobuf
+    pkgs.protobuf3_15
     pkgs.python3
     pkgs.httpie
     pkgs.yq
