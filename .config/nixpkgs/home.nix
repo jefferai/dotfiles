@@ -33,6 +33,7 @@ in {
     unstable.nodejs
     pkgs.swagger-codegen
     pkgs.bazel
+    unstable.azure-cli
   ];
 
   home.username = "jeff";
