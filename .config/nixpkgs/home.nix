@@ -21,7 +21,7 @@ in {
   home.stateVersion = "21.05";
 
   home.packages = [
-    pkgs.protobuf3_15
+    unstable.protobuf
     pkgs.python3
     pkgs.httpie
     pkgs.yq

@@ -37,7 +37,7 @@ alias drem2="vault2 write -f sys/replication/dr/primary/enable; vault2 write -fi
 
 alias kc='eval `keychain --eval --agents ssh --inherit any personal_rsa`'
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/opt/mssql-tools/bin:$PATH"
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
