@@ -22,6 +22,7 @@ in {
 
   home.packages = [
     unstable.protobuf
+    unstable.terraform
     pkgs.python3
     pkgs.httpie
     pkgs.yq
