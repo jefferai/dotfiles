@@ -120,7 +120,7 @@ fi
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
 
-source .venv/bin/activate
+#source .venv/bin/activate
 
 export DISPLAY="$(ip route get 8.8.8.8 | head -n 1 | cut -d ' ' -f 3 | awk '{print $1}'):0.0"
 export LIBGL_ALWAYS_INDIRECT=1
